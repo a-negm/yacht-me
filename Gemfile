@@ -32,6 +32,9 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
+# Devise gem
+gem 'devise'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
