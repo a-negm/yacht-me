@@ -18,6 +18,9 @@
                 input_html: { autocomplete: "Address" }%>
     <%= f.input :date_of_birth,
                 as: :date,
+                start_year: 1920,
+                end_year: 2020,
+                order: [:day, :month, :year],
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "Date of birth" }%>
