@@ -13,6 +13,11 @@
 
   <body>
     <%= yield %>
+    <% if user_signed_in? %>
+    <p>Signed in</p>
+    <% else %>
+    <p>Not signed in</p>
+    <% end %>
 
     <%= link_to "Log out", destroy_user_session_path, method: :delete %>
     <%= link_to "sign in", new_user_session_path  %>
