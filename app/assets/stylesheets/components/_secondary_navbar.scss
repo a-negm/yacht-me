@@ -1,0 +1,37 @@
+.secondary-navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+  padding: 20px 100px ;
+  border-bottom: 0.5px solid rgba(0, 0, 0, .5);
+
+}
+
+.secondary-navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.secondary-navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.secondary-navbar-lewagon h2{
+  color: black;
+  border: 3px solid transparent;
+}
+
+.secondary-navbar-lewagon a {
+  text-decoration: none;
+  color: black !important;
+  font-size: 1.3rem;
+  padding-bottom: 28px;
+  margin-bottom: -31px;
+  border: 3px solid transparent;
+}
+
+.secondary-navbar-lewagon li {
+  padding-left: 70px;
+}
+
+.navbar-links-sec a:hover{
+  border-bottom: 3px solid rgba(0, 0, 0, .7);
+}
