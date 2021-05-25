@@ -24,6 +24,8 @@ class BookingsController < ApplicationController
   end
 
   def successful
+    sleep(60)
+    redirect_to my_bookings_path
   end
 
   def booking_params
