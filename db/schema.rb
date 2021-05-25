@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_05_25_104049) do
+=======
+
+ActiveRecord::Schema.define(version: 2021_05_25_101004) do
+
+>>>>>>> bb57cfb3f02abc485bcb6de4dfcc6f73d8c59c84
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -34,6 +41,17 @@ ActiveRecord::Schema.define(version: 2021_05_25_104049) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+=======
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "yacht_id", null: false
+    t.bigint "user_id", null: false
+    t.date "check_out_date"
+    t.date "check_in_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["yacht_id"], name: "index_bookings_on_yacht_id"
+>>>>>>> bb57cfb3f02abc485bcb6de4dfcc6f73d8c59c84
   end
 
   create_table "users", force: :cascade do |t|
@@ -67,6 +85,11 @@ ActiveRecord::Schema.define(version: 2021_05_25_104049) do
     t.index ["user_id"], name: "index_yachts_on_user_id"
   end
 
+<<<<<<< HEAD
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+=======
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "yachts"
+>>>>>>> bb57cfb3f02abc485bcb6de4dfcc6f73d8c59c84
   add_foreign_key "yachts", "users"
 end
