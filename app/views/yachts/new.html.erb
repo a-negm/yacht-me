@@ -1,11 +1,46 @@
+
+  <%= render 'shared/navbar' %>
+
+
+
+<div class="container">
+
+<h1>Add a new yacht</h1>
+
+
+<div class="booking-form">
+
+<div class="row justify-content-center">
+
 <%= simple_form_for(@yacht) do |f| %>
+<div class="row justify-content-center">
 <%= f.input :name %>
+</div>
+<div class="row justify-content-center">
 <%= f.input :description %>
+</div>
+<div class="row justify-content-center">
 <%= f.input :length %>
+</div>
+<div class="row justify-content-center">
 <%= f.input :yacht_type %>
+</div>
+<div class="row justify-content-center">
 <%= f.input :number_of_cabins %>
+</div>
+<div class="row justify-content-center">
 <%= f.input :rental_price %>
+</div>
+<div class="row justify-content-center">
 <%= f.input :guests %>
+</div>
+<div class="row justify-content-center">
 <%= f.input :photo %>
-<%= f.submit %>
+</div>
+<div class="row justify-content-center">
+<%= f.submit class: 'btn btn-primary form-btn' %>
+</div>
 <% end %>
+
+</div>
+</div>

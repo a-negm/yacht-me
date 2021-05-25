@@ -7,11 +7,13 @@ class YachtsController < ApplicationController
 
   def new
     @yacht = Yacht.new
+    authorize @yacht
   end
 
   def create
     @yacht = Yacht.new(yacht_params)
     @yacht.user = current_user
+    authorize @yacht
     if @yacht.save
       redirect_to yachts_path
     else
