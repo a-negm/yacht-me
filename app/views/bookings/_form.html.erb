@@ -1,6 +1,1 @@
-<%= simple_form_for [yacht, booking] do |f| %>
-<%= f.input :check_in_date %>
-<%= f.input :check_out_date %>
-<% end %>
-
-
+<%= render "form" yacht: @yacht, booking: @booking %>

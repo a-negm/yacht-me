@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2021_05_25_101004) do
 
   create_table "yachts", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "yacht_type"
     t.integer "length"
     t.integer "number_of_cabins"
     t.integer "rental_price"

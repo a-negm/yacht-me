@@ -7,16 +7,20 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = params[:user_id]
-    @booking.yacht = params[:yacht_id]
+    @yacht = Yacht.find(params[:yacht_id])
+    @booking.yacht = @yacht
+    @booking.user = current_user
     if @booking.save
-      redirect_to booking_successful_path
+      redirect_to yacht_booking_successful_path
     else
       render :new
     end
   end
 
+  def successful
+  end
 
   def booking_params
     params.require(:booking).permit(:check_out_date, :check_in_date)
+  end
 end
