@@ -90,7 +90,7 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.7.0)
-    faker (2.18.0)
+    faker (2.17.0)
       i18n (>= 1.6, < 2)
     ffi (1.15.1)
     font-awesome-sass (5.12.0)
@@ -115,8 +115,6 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
-    nokogiri (1.11.5-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.11.5-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -231,7 +229,6 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
@@ -241,12 +238,8 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise
   dotenv-rails
-<<<<<<< HEAD
-  font-awesome-sass (~> 5.12.0)
-=======
   faker
-  font-awesome-sass
->>>>>>> e5f902b6035c8a41d8a48e7dd6ce65c5edd7d555
+  font-awesome-sass (~> 5.12.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
