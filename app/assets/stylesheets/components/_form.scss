@@ -16,7 +16,7 @@
 
 
 .form-container {
-    width: 400px;
+    width: 500px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -27,3 +27,15 @@
 .form-fields * {
   border-radius: 24px;
 }
+
+.form-fields label.file.optional {
+  margin-left: 88px;
+}
+
+#yacht_photo {
+  border-radius: 0;
+  align-items: center;
+  margin-left: 88px;
+  width: 100%;
+}
+
