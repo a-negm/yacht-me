@@ -1,10 +1,15 @@
 <h2>Add a new booking</h2>
 
-<%= simple_form_for [@yacht, @booking], url: yacht_bookings_path do |f| %>
-<%= f.input :check_in_date %>
-<%= f.input :check_out_date %>
-<%= f.submit %>
-<% end %>
 
+<div class="container">
+
+<h3> <%= @yacht.name %> </h3>
+
+<div class="booking-form">
+
+<%= render "form", yacht: @yacht, booking: @booking %>
+</div>
+
+</div>
 
 
