@@ -2,7 +2,7 @@
 <div class="row justify-content-center">
 <%= f.input :check_in_date,
             start_year: Date.today.year,
-            order: [:day, :month, :year] %>
+            order: [:day, :month, :year], as: :date %>
 </div>
 <div class="row justify-content-center">
 <%= f.input :check_out_date,start_year: Date.today.year, end_year: Date.today.year + 2,  order: [:day, :month, :year]%>
