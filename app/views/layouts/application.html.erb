@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>YachtMe</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,14 +14,11 @@
   </head>
 
   <body>
-    <%= yield %>
-    <% if user_signed_in? %>
-    <p>Signed in</p>
-    <% else %>
-    <p>Not signed in</p>
-    <% end %>
-
-    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-    <%= link_to "sign in", new_user_session_path  %>
+  <div class="container">
+    <%= render 'shared/navbar' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+     <%= yield %>
+  </div>
   </body>
 </html>
