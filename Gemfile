@@ -29,8 +29,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
+gem 'faker'
+
+# Devise gem
+gem 'devise'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -38,7 +42,7 @@ group :development, :test do
   gem 'dotenv-rails'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -59,4 +63,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
