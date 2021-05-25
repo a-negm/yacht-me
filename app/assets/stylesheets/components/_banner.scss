@@ -1,0 +1,22 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+}
+
+.container {
+  margin-left: 100px;
+  margin-top: 300px;
+  width: 600px;
+  margin-right: 0;
+  padding: 0;
+}
+
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 80px;
+  font-weight: 200;
+}
