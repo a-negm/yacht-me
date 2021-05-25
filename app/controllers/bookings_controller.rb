@@ -1,8 +1,14 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!, only: :new
 
+  def index
+    @user = current_user
+    @bookings = Booking.where(user: current_user.id)
+  end
+
   def new
     @booking = Booking.new
+    @yacht = Yacht.find(params[:yacht_id])
   end
 
   def create
