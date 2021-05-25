@@ -2,17 +2,18 @@ class YachtsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @yachts = Yacht.all
+    @yachts = policy_scope(Yacht)
   end
 
   def new
     @yacht = Yacht.new
+    authorize @yacht
   end
 
   def create
     @yacht = Yacht.new(yacht_params)
-    @user = current_user
-    @yacht.user = @user
+    @yacht.user = current_user
+    authorize @yacht
     if @yacht.save
       redirect_to yachts_path
     else
@@ -22,6 +23,7 @@ class YachtsController < ApplicationController
 
   def show
     @yacht = Yacht.find(params[:id])
+    authorize @yacht
   end
 
   private
