@@ -1,23 +1,4 @@
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  flex-grow: 1;
-  margin: 0 10px;
-}
-
-@media(max-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media(max-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card {
+.card_bookings {
   // background-size: cover;
   // background-position: center;
   // height: 150px;
@@ -33,39 +14,28 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px 20px;
+  margin-top: 20px;
+  border-radius: 15px;
 }
 
-.card > img {
+.card_bookings > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card h2 {
+.card_bookings h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card p {
+.card_bookings p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
-
-.card-trip-infos {
-  display: flex;
-  justify-content: space-between;
+.checkin-data {
+  padding: 10px 0px;
 }
-
-.description {
-  padding-left: 10px;
-}
-
-.avatar-bordered {
-  width: 40px;
-  border-radius: 50px;
-  border: white 1px solid;
-  align-items: flex-end;
-}
-
