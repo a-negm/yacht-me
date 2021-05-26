@@ -8,4 +8,11 @@ class BookingPolicy < ApplicationPolicy
   def create?
     true
   end
+  def index?
+    true
+  end
+
+  def successful?
+    true
+  end
 end

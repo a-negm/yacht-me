@@ -3,7 +3,8 @@ class BookingsController < ApplicationController
 
   def index
     @user = current_user
-    @bookings = Booking.where(user: current_user.id)
+    @bookings = policy_scope(Booking.where(user: current_user.id))
+    authorize @bookings
   end
 
   def new
@@ -16,6 +17,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @yacht = Yacht.find(params[:yacht_id])
     @booking.yacht = @yacht
+    authorize @booking
     @booking.user = current_user
     if @booking.save
       redirect_to yacht_booking_successful_path
@@ -25,7 +27,10 @@ class BookingsController < ApplicationController
   end
 
   def successful
-    sleep(60)
+    @bookings = Yacht.find(params[:yacht_id]).bookings
+    authorize @bookings
+    sleep(6)
+
     redirect_to my_bookings_path
   end
 
