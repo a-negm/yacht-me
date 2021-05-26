@@ -8,10 +8,13 @@
         <li>
           <%= link_to "Yachts", yachts_path, class: "nav-link" %>
         </li>
-        <li>
-          <%= link_to "Locations", "#", class: "nav-link site-links" %>
-        </li>
         <% if signed_in? %>
+          <li>
+            <%= link_to "My bookings", my_bookings_path, class: "nav-link site-links" %>
+          </li>
+          <li>
+            <%= link_to 'Add a new yacht', new_yacht_path, class: 'nav-link site-links'%>
+          </li>
           <li>
             <%= link_to "Log out", destroy_user_session_path , method: :delete, class: "nav-link site-links" %>
           </li>
@@ -34,21 +37,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto navbar-links-sec">
         <li>
-          <%= link_to "Yachts", "#", class: "nav-link" %>
-        </li>
-        <li>
-          <%= link_to "Locations", "#", class: "nav-link site-links-sec" %>
+          <%= link_to "Yachts", yachts_path, class: "nav-link" %>
         </li>
         <% if signed_in? %>
           <li>
-            <%= link_to "Log out", destroy_user_session_path , method: :delete, class: "nav-link" %>
+            <%= link_to "My bookings", my_bookings_path, class: "nav-link site-links-sec" %>
+          </li>
+          <li>
+            <%= link_to 'Add a new yacht', new_yacht_path, class: 'nav-link site-links-sec'%>
+          </li>
+          <li>
+            <%= link_to "Log out", destroy_user_session_path , method: :delete, class: "nav-link site-links-sec" %>
           </li>
         <% else %>
           <li>
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link site-links-sec" %>
           </li>
           <li>
-            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link site-links-sec" %>
           </li>
         <% end %>
       </ul>
