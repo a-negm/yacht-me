@@ -3,6 +3,13 @@ class YachtsController < ApplicationController
 
   def index
     @yachts = policy_scope(Yacht)
+
+    @markers = @yachts.geocoded.map do |yacht|
+      {
+        lat: yacht.latitude,
+        lng: yacht.longitude
+      }
+    end
   end
 
   def new
@@ -32,6 +39,7 @@ class YachtsController < ApplicationController
     params.require(:yacht).permit(:name, :description, :yacht_type, :length, :number_of_cabins,
                                   :rental_price,
                                   :user_id,
+                                  :location,
                                   :guests)
   end
 end

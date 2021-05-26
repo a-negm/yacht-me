@@ -2,7 +2,25 @@
 <% if user_signed_in? %>
 <%= link_to 'Add a new yacht', new_yacht_path, class: 'btn btn-primary form-btn mt-2 mx-2'%>
 <% end %>
-<div class="main-container">
+<!--Search a Yacht-->
+      <div class="searchbox">
+        <div class="row">
+          <div class="col-md-5"><input type="text" class="form-control" placeholder="Where to set sail?"></div>
+          <div class="col-md-3">
+            <select class="form-control category">
+              <option>Category</option>
+              <option>Sailing Yacht</option>
+              <option>Catamaran Yacht</option>
+              <option> Luxury Yacht</option>
+              <option>Sports Yacht</option>
+            </select>
+          </div>
+          <div class="col-md-1"><input type="button" class="btn btn-primary" class="form-control" value="Search"></div>
+        </div>
+      </div>
+    </div>
+<!--Search a Yacht-->
+   <div class="main-container">
    <hr>
    <div class="cards">
       <div class="card">
@@ -224,17 +242,29 @@
             <h2 class="card-trip-pricing">£19.99 per night</h2>
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
          </div>
+      </div>  
       </div>
+      <div>
       <% @yachts.each do |yacht| %>
-      <div class="card">
-         <img src="https://images.unsplash.com/photo-1504512318810-43062e38329b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht19">
-         <div>
-            <h2><%= yacht.name %></h2>
-            <p><%= yacht.description %></p>
+         <div class="card">
+            <img src="https://images.unsplash.com/photo-1504512318810-43062e38329b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht19">
+            <div>
+             <h2><%= yacht.name %></h2>
+             <p><%= yacht.description %></p>
+             <p><%= yacht.location %></p>
+            </div>
+            <div>
+            <h2><%= yacht.rental_price %></h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            </div>
          </div>
-      </div>
-      <% end %>
+         <% end %>
+         </div>
+          <div id="map"style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
    </div>
    <!-- Change the token below (https://www.mapbox.com/account/access-tokens/) -->
-   <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWFzdGVyeW91cm93bndheSIsImEiOiJja29lZHc1c3IwYmIyMnFxdHJwMDJreWdjIn0.V_prkGRhyiNiN46hkFIWwA'>
+  
 </div>

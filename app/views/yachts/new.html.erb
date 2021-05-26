@@ -37,7 +37,10 @@
 <%= f.input :guests %>
 </div>
 <div class="row justify-content-center">
-<%= f.input :photo %>
+<%= f.input :location %>
+</div>
+<div class="row justify-content-center">
+<%= f.input :photo, as: :file, label: false%> <!--add a file picture-->
 </div>
 <div class="row justify-content-center">
 <%= f.submit class: 'btn btn-primary form-btn' %>
