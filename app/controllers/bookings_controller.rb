@@ -3,7 +3,8 @@ class BookingsController < ApplicationController
 
   def index
     @user = current_user
-    @bookings = Booking.where(user: current_user.id)
+    @bookings = policy_scope(Booking.where(user: current_user.id))
+    authorize @bookings
   end
 
   def new
