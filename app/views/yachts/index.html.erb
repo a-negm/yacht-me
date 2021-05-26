@@ -1,0 +1,240 @@
+<%= render 'shared/navbar' %>
+<% if user_signed_in? %>
+<%= link_to 'Add a new yacht', new_yacht_path, class: 'btn btn-primary form-btn mt-2 mx-2'%>
+<% end %>
+<div class="main-container">
+   <hr>
+   <div class="cards">
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)" alt="Boat">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Yacht Aquila</h2>
+               <p>Enjoy luxury cruising</p>
+            </div>
+            <h2 class="card-trip-pricing">£49.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80" alt="Yacht">
+         <div class="card-trip-infos">
+            <div>
+               <h2>The Jackdaw</h2>
+               <p>Set Sail to your next Adventure</p>
+            </div>
+            <h2 class="card-trip-pricing">£79.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1592437111271-239fa8dcb401?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80" alt="Yacht1">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Tour Catamaran</h2>
+               <p>Comfortablized cruising</p>
+            </div>
+            <h2 class="card-trip-pricing">£69.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1531339751961-324b4c494be9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80" alt="Yacht3">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Yacht Adventure</h2>
+               <p>Fast and great comfort!</p>
+            </div>
+            <h2 class="card-trip-pricing">£199.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1581271164789-7c97932822d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht4">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Yacht Catamaran!</h2>
+               <p>Set Sail with your trip</p>
+            </div>
+            <h2 class="card-trip-pricing">£59.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1580422666359-7160890d8c0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht5">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Night redemption Cruise</h2>
+               <p>Enjoy a right by night</p>
+            </div>
+            <h2 class="card-trip-pricing">£89.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1587230049060-c3de8f7327fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=955&q=80" alt="Yacht6">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Expensive rich Adventure</h2>
+               <p>Yachts exclusive trip!</p>
+            </div>
+            <h2 class="card-trip-pricing">£999.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1535024966840-e7424dc2635b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=633&q=80" alt="Yacht7">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Trip Jumper</h2>
+               <p>Jump on your next trip</p>
+            </div>
+            <h2 class="card-trip-pricing">£49.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1519078589617-2d7cf0b825c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=707&q=80" alt="Yacht8">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Pirate Yacht!</h2>
+               <p>Cruise like a real pirate</p>
+            </div>
+            <h2 class="card-trip-pricing">£99.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1599774196150-af6236693157?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht9">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Luxury Escape</h2>
+               <p>Cruise by IBIZA</p>
+            </div>
+            <h2 class="card-trip-pricing">£799.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1599257559270-eeccb1f266df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80" alt="Yacht10">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Off the Path!</h2>
+               <p>Cruise around Portugal</p>
+            </div>
+            <h2 class="card-trip-pricing">£69.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1028&q=80" alt="Yacht11">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Short trip Catamaran</h2>
+               <p>Skip to every Islands you want!</p>
+            </div>
+            <h2 class="card-trip-pricing">£39.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1599383885524-8ab14dee8249?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="Yacht12">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Luxury Camper</h2>
+               <p>Camp on high Society</p>
+            </div>
+            <h2 class="card-trip-pricing">£999.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1562768914-009c426fe832?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1018&q=80" alt="Yacht13">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Hotel surfing</h2>
+               <p>Short trips to few hotels</p>
+            </div>
+            <h2 class="card-trip-pricing">£29.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1422415685270-97d4c082317b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht14">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Sailing to Amsterdam!</h2>
+               <p>Set Sail with the Vertrouven</p>
+            </div>
+            <h2 class="card-trip-pricing">£89.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1579121100057-aa5ad13cf46c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1255&q=80" alt="Yacht15">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Yacht Viet!</h2>
+               <p>Set Sail in Vietnam!</p>
+            </div>
+            <h2 class="card-trip-pricing">£699.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1621499901409-cfc9598bf28a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80" alt="Yacht16">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Norway Yacht trip!</h2>
+               <p>Nordic yachting!</p>
+            </div>
+            <h2 class="card-trip-pricing">£99.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1598695643539-f47d01094dee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1089&q=80" alt="Yacht17">
+         <div class="card-trip-infos">
+            <div>
+               <h2>The small Sweden Yacht</h2>
+               <p>Have a small trip to sweden's share islands!</p>
+            </div>
+            <h2 class="card-trip-pricing">£79.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1585827308625-33522324e0a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" alt="Yacht18">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Yacht Maritime!</h2>
+               <p>Cruising with rich and Luxus</p>
+            </div>
+            <h2 class="card-trip-pricing">£999.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1504512318810-43062e38329b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht19">
+         <div class="card-trip-infos">
+            <div>
+               <h2>Nomad Cruise</h2>
+               <p>like digital Nomads!</p>
+            </div>
+            <h2 class="card-trip-pricing">£19.99 per night</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+         </div>
+      </div>
+      <% @yachts.each do |yacht| %>
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1504512318810-43062e38329b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht19">
+         <div>
+            <h2><%= yacht.name %></h2>
+            <p><%= yacht.description %></p>
+         </div>
+      </div>
+      <% end %>
+   </div>
+   <!-- Change the token below (https://www.mapbox.com/account/access-tokens/) -->
+   <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWFzdGVyeW91cm93bndheSIsImEiOiJja29lZHc1c3IwYmIyMnFxdHJwMDJreWdjIn0.V_prkGRhyiNiN46hkFIWwA'>
+</div>

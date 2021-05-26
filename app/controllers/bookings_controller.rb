@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     @yacht = Yacht.find(params[:yacht_id])
+    authorize @booking
   end
 
   def create

@@ -8,6 +8,5 @@ Rails.application.routes.draw do
      get '/booking_successful', to: "bookings#successful", as: :booking_successful
   end
      get '/my-bookings', to: 'bookings#index', as: :my_bookings
-
-
+  
 end
