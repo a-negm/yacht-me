@@ -29,7 +29,6 @@ class BookingsController < ApplicationController
   def successful
     @bookings = Yacht.find(params[:yacht_id]).bookings
     authorize @bookings
-    sleep(6)
 
     redirect_to my_bookings_path
   end
