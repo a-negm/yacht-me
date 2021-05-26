@@ -10,7 +10,7 @@ User.destroy_all
 Yacht.destroy_all
 Booking.destroy_all
 
-User.create(first_name: "David", last_name: "Smith", username: 'dsmith', address: "53 Manchester Ave, Manchester", date_of_birth: "1964-12-24" )
+User.create(first_name: "David", last_name: "Smith", username: 'dsmith', address: "53 Manchester Ave, Manchester", date_of_birth: "1964-12-24", email: "dsmith@gmail.com", password: 123456 )
 
 
 Yacht.create(name: "HMS Eccles",
@@ -61,7 +61,7 @@ Yacht.create(name: "Vajoliroja",
      length: 46,
      number_of_cabins: 5,
      rental_price: 13000,
-     description: "The name "Vajoliroja" comes from a combination of names in the Depp family: "Va" for Vanessa Paradis his girlfriend, "jo" for Johnny's own name, "liro" after Depp's daughter Lily Rose, and "ja" for Depp's son Jack.",
+     description: "The name 'Vajoliroja' comes from a combination of names in the Depp family: 'Va' for Vanessa Paradis his girlfriend, 'jo' for Johnny's own name, 'liro' after Depp's daughter Lily Rose, and 'ja' for Depp's son Jack.",
      user_id: 1,
      guests: 12,
      url: "https://cdn.architecturendesign.net/wp-content/uploads/2015/08/01-AD-Vajoliroja-Johnny-Depp-Yacht.jpg")
