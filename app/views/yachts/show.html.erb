@@ -1,5 +1,9 @@
 <%= render 'shared/navbar' %>
-<h1>Hey</h1>
 
-
+<div class="card">
+  <div class="card-body">
+    <h4><%= @yacht.name %></h4>
+    <p><%= @yacht.description %></p>
+  </div>
+</div>
 <%= link_to "new booking", '/yachts/1/bookings/new'  %>
