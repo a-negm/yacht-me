@@ -7,7 +7,8 @@
     <div class="col">
       <h2><%= @yacht.name %></h2>
     </div>
-      <a href="#" class="btn btn-primary">Book this Yacht</a>
+      <%= link_to "Book this Yacht", new_yacht_booking_path(@yacht), class: "btn btn-primary" %>
+      <!-- <a href="#" class="btn btn-primary">Book this Yacht</a> -->
   </div>
   <div class="row justify-content-between p-4">
     <div class="col-8">
@@ -21,7 +22,7 @@
         <div class="card-body">
           <ul>
             <li>Type: <%= @yacht.yacht_type %></li>
-            <li>Length: <%= @yacht.length %></li>
+            <li>Length: <%= @yacht.length %>m</li>
             <li>Cabins: <%= @yacht.number_of_cabins %></li>
             <li>Guests: <%= @yacht.guests %></li>
           </ul>
