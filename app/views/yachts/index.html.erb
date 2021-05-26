@@ -7,13 +7,16 @@
       <% @yachts.each do |yacht| %>
       <div class="card">
          <%= link_to yacht_path(yacht) do %>
-         <img src="https://images.unsplash.com/photo-1504512318810-43062e38329b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Yacht19" class="card-img-top">
+         <img src="<%= yacht.url %>" alt="Yacht19" class="card-img-top">
          <% end %>
          <div class="card-trip-infos">
          <div>
             <h2><%= yacht.name %></h2>
             <p><%= yacht.description %></p>
+            <p><strong> <%= yacht.yacht_type %></strong></p>
          </div>
+           <h2 class="card-trip-pricing">£<%= yacht.rental_price%> per night</h2>
+            <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
          </div>
       </div>
       <% end %>
