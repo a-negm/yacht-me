@@ -1,0 +1,17 @@
+
+<%= render '/shared/navbar' %>
+
+<div class="container">
+
+<h1>My bookings</h1>
+<div class="col">
+<div class="card">
+  <% @bookings.each do |booking| %>
+  <h2 class="card-title"><%= booking.yacht.name %></h2>
+  <p><%= booking.yacht.description %></p>
+  <p> Your check in date is: <%= booking.check_in_date.strftime('%a %d %b %Y') %></p>
+  <p>Your check out date is: <%= booking.check_out_date.strftime('%a %d %b %Y') %></p>
+  <% end %>
+  </div>
+  </div>
+</div>

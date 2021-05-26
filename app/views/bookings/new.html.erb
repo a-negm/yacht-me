@@ -1,0 +1,17 @@
+<%= render '/shared/navbar' %>
+
+<h2>Add a new booking</h2>
+
+
+<div class="container">
+
+<h3> <%= @yacht.name %> </h3>
+
+<div class="booking-form">
+
+<%= render "form", yacht: @yacht, booking: @booking %>
+</div>
+
+</div>
+
+
