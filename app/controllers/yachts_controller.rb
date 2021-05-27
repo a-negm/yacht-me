@@ -15,13 +15,12 @@ class YachtsController < ApplicationController
         lng: yacht.longitude
       }
 
-
-      # if params["search"]
-      #   @filter = params["search"]["Categories"].concat(params["search"]["strengths"]).flatten.reject(&:blank?)
-      #   @yachts = @filter.empty? ? Yacht.all : Yacht.all.tagged_with(@filter, any: true)
-      # else
-      #   @yachts = Yacht.all
-      # end
+      if params["search"].present?
+        @categories = params["search"]["Categories"].concat(params["search"]["strengths"]).flatten.reject(&:blank?)
+        @yachts = @filter.empty? ? Yacht.all : Yacht.all.tagged_with(@filter, any: true)
+      else
+        @yachts = Yacht.all
+      end
     end
   end
 
