@@ -12,7 +12,7 @@ def new_photo
   base_url = "https://api.unsplash.com/photos/random?client_id=#{ENV['UNSPLASH_KEY']}&query=yacht&orientation=landscape"
   response = HTTParty.get(base_url, format: :plain)
   results = JSON.parse response, symbolize_names: true
-  yacht_photo = results[:urls][:raw]
+  yacht_photo = results[:urls][:full]
 end
 
 p 'destroying records'
@@ -116,7 +116,6 @@ Yacht.create(name: "Vajoliroja",
      number_of_cabins: 5,
      rental_price: 13000,
      description: "The name 'Vajoliroja' comes from a combination of names in the Depp family: 'Va' for Vanessa Paradis his girlfriend, 'jo' for Johnny's own name, 'liro' after Depp's daughter Lily Rose, and 'ja' for Depp's son Jack.",
-     user_id: 2,
      user_id: user.id,
      guests: 12,
      location: "Antarktika")
@@ -127,7 +126,7 @@ Yacht.create(name: "Venus",
      number_of_cabins: 8,
      rental_price: 20000,
      description: "The yacht is built with glass features inspired by the Apple store designs, and it includes six bedrooms with a top-of-the-line electronic communication system to facilitate communication throughout the ship. The ship is run by a group of 27-inch iMac computers located in the wheel house.",
-     user_id: 1,
+     user_id: user.id,
      guests: 18,
      location: "Ewa Beach")
 
