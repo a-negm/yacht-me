@@ -2,6 +2,7 @@
 <% if user_signed_in? %>
 <% end %>
 <!--Search a Yacht-->
+
 <div class="center">
 <div class="searchbox">
   <div class="row">
@@ -12,8 +13,8 @@
     Yachtegories
   </button>
     <div class="dropdown-menu search-catgy">
-
-    <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes %>
+      <div class="drop"></div>
+    <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes, class: "dropdown-item" %>
     </div>
   </div>
   <%= f.submit "Search", class: "btn btn-primary btn-search pad-small" %>
