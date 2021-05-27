@@ -3,7 +3,7 @@
 <% end %>
 <!--Search a Yacht-->
 
-<div class="searchbox">
+<div class="searchbox mt-3">
   <div class="row">
 <%= simple_form_for :search, url: yachts_path, method: "GET", html: { class: 'form-inline search-form' } do |f| %>
   <%= f.input :location, input_html: {placeholder: "Where will you set sail?"} %>
@@ -13,8 +13,8 @@
   </button>
 
     <div class="dropdown-menu search-catgy">
-
-    <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes %>
+      <div class="drop"></div>
+    <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes, class: "dropdown-item" %>
     </div>
   </div>
   <%= f.submit "Search", class: "btn btn-primary btn-search pad-small" %>
