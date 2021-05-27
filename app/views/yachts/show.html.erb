@@ -7,10 +7,10 @@
     <div class='col d-flex flex-row justify-content-between align-items-end mt-5'>
     <div class='d-flex flex-row align-items-end'>
       <h1><%= @yacht.name %></h1>
-      <h3 class='ml-3'><%= @yacht.rental_price %>/night</h3>
+      <h3 class='ml-3'><%= @yacht.rental_price %>€/night</h3>
     </div>
       <div>
-        <%= link_to "Book this Yacht", new_yacht_booking_path(@yacht), class: "btn btn-primary btn-large btn-search" %>
+        <%= link_to "Book this Yacht", new_yacht_booking_path(@yacht), class: "btn btn-primary btn-large btn-lg btn-search" %>
       </div>
     </div>
       <!-- <a href="#" class="btn btn-primary">Book this Yacht</a> -->
