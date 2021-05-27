@@ -7,6 +7,11 @@ class Booking < ApplicationRecord
 
   validate :check_out_date_after_check_in_date
 
+  enum status: [:accepted, :rejected, :pending]
+
+  validates :check_in_date, :check_out_date, overlap: { scope: 'yacht_id',
+                                                        message_content: 'overlaps with another booking.' }
+
   private
 
   def check_out_date_after_check_in_date

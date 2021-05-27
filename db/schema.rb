@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_05_27_131534) do
 
   # These are extensions that must be enabled in order to support this database
@@ -43,6 +44,8 @@ ActiveRecord::Schema.define(version: 2021_05_27_131534) do
     t.date "check_in_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "number_of_guests"
+    t.integer "status", default: 2
     t.index ["user_id"], name: "index_bookings_on_user_id"
     t.index ["yacht_id"], name: "index_bookings_on_yacht_id"
   end

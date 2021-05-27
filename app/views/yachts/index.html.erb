@@ -14,11 +14,12 @@
               <option>Sports Yacht</option>
             </select>
           </div>
-          <div class="col-md-1"><input type="button" class="btn btn-primary" class="form-control" value="Search"></div>
+          <div class="col-md-1"><input type="button" class="btn btn-primary btn-search" class="form-control" value="Search"></div>
         </div>
       </div>
     </div>
 <!--Search a Yacht-->
+
    <div class="main-container">
    <hr>
    <div class="cards">
@@ -35,7 +36,7 @@
             <p><em><%= yacht.location %></em></p>
          </div>
            <h2 class="card-trip-pricing">£<%= yacht.rental_price%> per night</h2>
-            <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
          </div>
       </div>
       <% end %>
@@ -46,5 +47,5 @@
      </div>
    </div>
    <!-- Change the token below (https://www.mapbox.com/account/access-tokens/) -->
-  
+
 </div>

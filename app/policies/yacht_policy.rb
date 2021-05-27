@@ -28,4 +28,8 @@ class YachtPolicy < ApplicationPolicy
   def update?
     true
   end
+
+  def successful?
+    true
+  end
 end

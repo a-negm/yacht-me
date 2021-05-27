@@ -10,5 +10,7 @@ Rails.application.routes.draw do
      get '/booking_successful', to: "bookings#successful", as: :booking_successful
   end
      get '/my-bookings', to: 'bookings#index', as: :my_bookings
-  
+     delete '/bookings/:id', to: 'bookings#destroy', as: :delete_booking
+     get 'bookings/:user_id', to: 'bookings#show', as: :booking
+
 end
