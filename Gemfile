@@ -45,6 +45,9 @@ gem 'cloudinary', '~> 1.16.0'
 # Validates overlap - checks if the dates of the booking have an overlap
 gem 'validates_overlap'
 
+# Geocoder gem
+gem 'geocoder'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
@@ -61,8 +64,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  # Geocoder gem
-gem 'geocoder'
 end
 
 group :test do
