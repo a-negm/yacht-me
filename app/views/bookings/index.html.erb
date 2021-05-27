@@ -2,9 +2,12 @@
 
 <div class="my-bookings-container">
 
-<h1>My bookings</h1>
+<h1 class='my-3'>My bookings</h1>
+
+<hr>
 <div class="col">
       <% @bookings.each do |booking| %>
+      <%= link_to booking_path(booking) do %>
         <div class="card_bookings">
           <h2 class="card-title">Yacht name: <%= booking.yacht.name %></h2>
           <div class="checkin-data">
@@ -12,7 +15,10 @@
             <p>Your check out date is: <%= booking.check_out_date.strftime('%a %d %b %Y') %></p>
           </div>
           <p><%= booking.yacht.description %></p>
+          <p id="booking-status" data-booking-status="<%= booking.status %>">Status: <strong><%= booking.status.capitalize %></p> </strong>
+          <%= link_to "Delete this booking", delete_booking_path(booking), method: :delete, data: {confirm: "Are you sure you want to delete #{booking.yacht.name}?"} %>
         </div>
+        <% end %>
       <% end %>
   </div>
 </div>

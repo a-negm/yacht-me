@@ -1,0 +1,32 @@
+<%= render 'shared/navbar' %>
+<div id="user-page">
+  <div id="user-page-img" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(https://listings.classicyachtinfo.com/wp-content/uploads/listing-uploads/gallery/2020/08/Moonbeam-of-Fife-2017.jpg);">
+  </div>
+  <div >
+    <h2 align="center">My Yachts Listings</h2>
+    <% @yachts.each do |yacht| %>
+      <div class="card-product user-cards">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.d5A5BDorSA6qjx78D35hfgHaEK%26pid%3DApi&f=1" alt="Yacht19" class="card-img-top" />
+        <div class="card-product-infos">
+          <h2><%= yacht.name %></h2>
+          <p><%= yacht.description %></p>
+          <div id="user-action">
+            <div class="yacht-delete">
+              <%= link_to edit_yacht_path(yacht),
+                method: :get do %>
+                <i class="fas fa-edit"></i>
+              <% end %>
+            </div>
+            <div class="yacht-delete">
+              <%= link_to yacht_path(yacht),
+                method: :delete,
+                data: { confirm: "Are you sure?" } do %>
+                <i class="far fa-trash-alt trash"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -15,4 +15,12 @@ class BookingPolicy < ApplicationPolicy
   def successful?
     true
   end
+
+  def destroy?
+    true
+  end
+
+  def show?
+    true
+  end
 end

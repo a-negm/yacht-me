@@ -16,6 +16,9 @@
             <%= link_to 'Add a new yacht', new_yacht_path, class: 'nav-link site-links'%>
           </li>
           <li>
+            <%= link_to "Home", user_path(current_user), class: "nav-link site-links" %>
+          </li>
+          <li>
             <%= link_to "Log out", destroy_user_session_path , method: :delete, class: "nav-link site-links" %>
           </li>
         <% else %>
@@ -45,6 +48,9 @@
           </li>
           <li>
             <%= link_to 'Add a new yacht', new_yacht_path, class: 'nav-link site-links-sec'%>
+          </li>
+          <li>
+            <%= link_to "Home", user_path(current_user), class: "nav-link site-links" %>
           </li>
           <li>
             <%= link_to "Log out", destroy_user_session_path , method: :delete, class: "nav-link site-links-sec" %>

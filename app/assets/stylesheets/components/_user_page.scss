@@ -1,0 +1,40 @@
+#user-page {
+  width:80%;
+  margin: 100px auto;
+  display: flex;
+}
+
+#user-page-img {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 50%;
+}
+
+.user-cards {
+  margin: 20px;
+  position: relative;
+}
+
+.yacht-delete {
+  margin-left: 10px;
+}
+
+.yacht-edit {
+
+}
+
+#user-action {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.yacht-delete a {
+  color: black;
+}
+  // background: #BCEEF7;
+  // background: -webkit-linear-gradient(bottom right, #BCEEF7, #006B6B);
+  // background: -moz-linear-gradient(bottom right, #BCEEF7, #006B6B);
+  // background: linear-gradient(to top left, #BCEEF7, #006B6B);

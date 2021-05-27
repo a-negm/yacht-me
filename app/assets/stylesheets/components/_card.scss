@@ -53,9 +53,16 @@
   margin: 0;
 }
 
+// .description {
+//   text-overflow:ellipsis;
+// }
+
 .card-trip-infos {
   display: flex;
   justify-content: space-between;
+  padding: 8px 24px;
+  max-height: 200px;
+  text-overflow: ellipsis;
 }
 
 .description {

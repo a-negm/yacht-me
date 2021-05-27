@@ -1,20 +1,23 @@
 // Import your components CSS files here.
 @import "alert";
 @import "avatar";
-@import 'form';
-@import "navbar";
 @import "banner";
-
-@import "map";
+@import 'button';
 @import "card";
-@import "secondary_navbar";
-
-@import "search_yachts";
+@import "card_bookings";
+@import "content_index_page";
 @import "container";
 
+@import 'form';
 @import "hero";
 @import "content_index_page";
-@import "card_bookings"
+@import "card_bookings";
 
+@import "map";
+@import "navbar";
+@import "search_yachts";
+@import "secondary_navbar";
+@import "status";
 
-
+@import "user_page";
+@import "card_product"
