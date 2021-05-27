@@ -33,6 +33,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-height: 400px;
 }
 
 .card > img {
@@ -65,9 +66,6 @@
   text-overflow: ellipsis;
 }
 
-.description {
-  padding-left: 10px;
-}
 
 .avatar-bordered {
   width: 40px;
