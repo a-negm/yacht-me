@@ -11,7 +11,9 @@ require 'open-uri'
 def new_photo
   base_url = "https://api.unsplash.com/photos/random?client_id=#{ENV['UNSPLASH_KEY']}&query=yacht&orientation=landscape"
   response = HTTParty.get(base_url, format: :plain)
+  puts response
   results = JSON.parse response, symbolize_names: true
+  puts results
   yacht_photo = results[:urls][:raw]
 end
 
@@ -116,7 +118,6 @@ Yacht.create(name: "Vajoliroja",
      number_of_cabins: 5,
      rental_price: 13000,
      description: "The name 'Vajoliroja' comes from a combination of names in the Depp family: 'Va' for Vanessa Paradis his girlfriend, 'jo' for Johnny's own name, 'liro' after Depp's daughter Lily Rose, and 'ja' for Depp's son Jack.",
-     user_id: 2,
      user_id: user.id,
      guests: 12,
      location: "Antarktika")
