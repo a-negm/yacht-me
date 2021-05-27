@@ -16,4 +16,20 @@ class YachtPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def destroy?
+    true
+  end
+
+  def edit?
+    true
+  end
+
+  def update?
+    true
+  end
+
+  def successful?
+    true
+  end
 end

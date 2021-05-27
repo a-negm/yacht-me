@@ -11,6 +11,7 @@ Yacht.destroy_all
 Booking.destroy_all
 
 User.create(first_name: "David", last_name: "Smith", username: 'dsmith', address: "53 Manchester Ave, Manchester", date_of_birth: "1964-12-24", email: "dsmith@gmail.com", password: 123456 )
+User.create(first_name: "Soto", last_name: "Dim", username: 'Soto', address: "53 Manchester Ave, Manchester", date_of_birth: "1964-12-24", email: "soto@gmail.com", password: 111111 )
 
 User.create(first_name: "Dave", last_name: "Bob", username: 'Dbob', address: "54 Hey Ave, Manchester", date_of_birth: "1965-12-24", email: "dbob@gmail.com", password: 123456 )
 
@@ -32,7 +33,11 @@ Yacht.create(name: "The Marquess",
      number_of_cabins: 4,
      rental_price: 400,
      description: "A classic boat anchored at Southampton. A vintage yacht designed for the enterprising individual.",
+
      user_id: 2,
+
+     user_id: 1,
+
      location: "Honey Harbour",
      guests: 2)
 
@@ -65,9 +70,10 @@ Yacht.create(name: "Vajoliroja",
      rental_price: 13000,
      description: "The name 'Vajoliroja' comes from a combination of names in the Depp family: 'Va' for Vanessa Paradis his girlfriend, 'jo' for Johnny's own name, 'liro' after Depp's daughter Lily Rose, and 'ja' for Depp's son Jack.",
      user_id: 2,
+     user_id: 1,
      guests: 12,
      location: "Antarktika")
-     
+
 Yacht.create(name: "Venus",
      yacht_type: "luxury-yacht",
      length: 60,
