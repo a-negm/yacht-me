@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from "../plugins/flatpickr";
+import { changeStatusColor } from "../plugins/init_change_status_color.js";
 
 
 // Internal imports, e.g:
@@ -36,4 +37,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initFlatpickr();
+  changeStatusColor();
 });

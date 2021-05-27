@@ -13,7 +13,7 @@
             <p>Your check out date is: <%= booking.check_out_date.strftime('%a %d %b %Y') %></p>
           </div>
           <p><%= booking.yacht.description %></p>
-          <p id="booking-status"> <strong><%= booking.status.capitalize %></p> </strong>
+          <p id="booking-status" data-booking-status="<%= booking.status %>"> <strong><%= booking.status.capitalize %></p> </strong>
         </div>
       <% end %>
   </div>

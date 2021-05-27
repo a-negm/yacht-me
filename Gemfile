@@ -42,7 +42,8 @@ gem 'pundit'
 # Cloudinary
 gem 'cloudinary', '~> 1.16.0'
 
-
+# Validates overlap - checks if the dates of the booking have an overlap
+gem 'validates_overlap'
 
 group :development, :test do
   gem 'pry-byebug'
