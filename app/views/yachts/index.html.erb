@@ -6,10 +6,19 @@
 <div class="searchbox">
   <div class="row">
 <%= simple_form_for :search, url: yachts_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :location, input_html: {value: "Where you set sail?"} %> 
-  <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes %>  
+  <%= f.input :location, input_html: {value: "Where will you set sail?"} %>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Yachtegories
+  </button>
+
+    <div class="dropdown-menu">
+
+    <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes %>
+    </div>
+  </div>
   <%= f.submit "Search", class: "btn btn-primary btn-search" %>
-  <%= link_to "Reset", root_path  %>
+  <!-- <%= link_to "Reset", root_path %> -->
 <% end %>
 </div>
 </div>
@@ -25,7 +34,7 @@
          <div class="card-trip-infos">
          <div>
             <h2><%= yacht.name %></h2>
-            <p><%= yacht.description %></p>
+            <p class="description"><%= yacht.description %></p>
             <p><strong> <%= yacht.yacht_type %></strong></p>
             <p><em><%= yacht.location %></em></p>
          </div>
