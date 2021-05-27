@@ -28,6 +28,25 @@ class YachtsController < ApplicationController
     end
   end
 
+  def edit
+    @yacht = Yacht.find(params[:id])
+    authorize @yacht
+  end
+
+  def update
+    @yacht = Yacht.find(params[:id])
+    authorize @yacht
+    @yacht.update(yacht_params)
+    redirect_to user_path(current_user)
+  end
+
+  def destroy
+    @yacht = Yacht.find(params[:id])
+    authorize @yacht
+    @yacht.destroy
+    redirect_to user_path(current_user)
+  end
+
   def show
     @yacht = Yacht.find(params[:id])
     authorize @yacht

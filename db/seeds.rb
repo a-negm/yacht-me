@@ -11,6 +11,7 @@ Yacht.destroy_all
 Booking.destroy_all
 
 User.create(first_name: "David", last_name: "Smith", username: 'dsmith', address: "53 Manchester Ave, Manchester", date_of_birth: "1964-12-24", email: "dsmith@gmail.com", password: 123456 )
+User.create(first_name: "Soto", last_name: "Dim", username: 'Soto', address: "53 Manchester Ave, Manchester", date_of_birth: "1964-12-24", email: "soto@gmail.com", password: 111111 )
 
 
 Yacht.create(name: "HMS Eccles",

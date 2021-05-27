@@ -17,11 +17,19 @@ class YachtPolicy < ApplicationPolicy
     true
   end
 
-  def successful?
+  def destroy?
     true
   end
 
-  def destroy?
+  def edit?
+    true
+  end
+
+  def update?
+    true
+  end
+
+  def successful?
     true
   end
 end
