@@ -2,6 +2,7 @@ class YachtsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
+
     @yachts = policy_scope(Yacht)
      if params["search"].present?
        @yachts = policy_scope(Yacht.near(params["search"]["location"]))
@@ -14,8 +15,6 @@ class YachtsController < ApplicationController
         lat: yacht.latitude,
         lng: yacht.longitude
       }
-
-
       # if params["search"]
       #   @filter = params["search"]["Categories"].concat(params["search"]["strengths"]).flatten.reject(&:blank?)
       #   @yachts = @filter.empty? ? Yacht.all : Yacht.all.tagged_with(@filter, any: true)
@@ -72,6 +71,6 @@ class YachtsController < ApplicationController
                                   :rental_price,
                                   :user_id,
                                   :location,
-                                  :guests)
+                                  :guests, photo: [] )
   end
 end
