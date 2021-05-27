@@ -70,6 +70,6 @@ class YachtsController < ApplicationController
                                   :rental_price,
                                   :user_id,
                                   :location,
-                                  :guests)
+                                  :guests, photo: [] )
   end
 end
