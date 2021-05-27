@@ -2,17 +2,19 @@
 <% if user_signed_in? %>
 <% end %>
 <!--Search a Yacht-->
-
+<div class="center">
 <div class="searchbox">
   <div class="row">
 <%= simple_form_for :search, url: yachts_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :location, input_html: {value: "Where you set sail?"} %> 
+  <%= f.input :location, placeholder:"Where you set sail?" %> 
   <%= f.input :category, label: "Categories", collection:$categories, as: :select %>  
   <%= f.submit "Search", class: "btn btn-primary btn-search" %>
-  <%= link_to "Reset", yachts_path  %>
+  <%# <%= link_to "Reset", yachts_path  %> 
 <% end %>
 </div>
 </div>
+</div>
+
 
    <div class="main-container">
    <hr>
