@@ -2,7 +2,7 @@
 <% if user_signed_in? %>
 <% end %>
 <!--Search a Yacht-->
-
+<div class="center">
 <div class="searchbox">
   <div class="row">
 <%= simple_form_for :search, url: yachts_path, method: "GET", html: { class: 'form-inline search-form' } do |f| %>
@@ -11,7 +11,6 @@
     <button class="btn btn-secondary dropdown-toggle yachtegories pad-small" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Yachtegories
   </button>
-
     <div class="dropdown-menu search-catgy">
 
     <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes %>
@@ -22,6 +21,8 @@
 <% end %>
 </div>
 </div>
+</div>
+
 
    <div class="main-container">
    <hr>

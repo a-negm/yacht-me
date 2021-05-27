@@ -2,12 +2,13 @@ class YachtsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    # raise
-    # if params["search"]["location"].present?
-    #   @yachts = policy_scope(Yacht.near(params["search"]["location"]))
-    # else
-      @yachts = policy_scope(Yacht)
-    # end
+
+    @yachts = policy_scope(Yacht)
+     if params["search"].present?
+       @yachts = policy_scope(Yacht.near(params["search"]["location"]))
+     else
+       @yachts = policy_scope(Yacht)
+     end
 
     @markers = @yachts.geocoded.map do |yacht|
       {
