@@ -33,6 +33,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-height: 400px;
 }
 
 .card > img {
@@ -53,14 +54,18 @@
   margin: 0;
 }
 
+// .description {
+//   text-overflow:ellipsis;
+// }
+
 .card-trip-infos {
   display: flex;
   justify-content: space-between;
+  padding: 8px 24px;
+  max-height: 200px;
+  text-overflow: ellipsis;
 }
 
-.description {
-  padding-left: 10px;
-}
 
 .avatar-bordered {
   width: 40px;

@@ -42,6 +42,10 @@ gem 'pundit'
 # Cloudinary
 gem 'cloudinary', '~> 1.16.0'
 
+# Httparty
+gem 'httparty', '~> 0.18.1'
+
+#Acts as Taggable-on
 gem 'acts-as-taggable-on', '~> 6.0'
 
 

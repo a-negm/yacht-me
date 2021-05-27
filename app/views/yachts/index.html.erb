@@ -2,14 +2,23 @@
 <% if user_signed_in? %>
 <% end %>
 <!--Search a Yacht-->
+
 <div class="center">
 <div class="searchbox">
   <div class="row">
-<%= simple_form_for :search, url: yachts_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :location, placeholder:"Where you set sail?" %> 
-  <%= f.input :category, label: "Categories", collection:$categories, as: :select %>  
-  <%= f.submit "Search", class: "btn btn-primary btn-search" %>
-  <%# <%= link_to "Reset", yachts_path  %> 
+<%= simple_form_for :search, url: yachts_path, method: "GET", html: { class: 'form-inline search-form' } do |f| %>
+  <%= f.input :location, input_html: {placeholder: "Where will you set sail?"} %>
+  <div class="dropdown dropdown-yacht">
+    <button class="btn btn-secondary dropdown-toggle yachtegories pad-small" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Yachtegories
+  </button>
+    <div class="dropdown-menu search-catgy">
+      <div class="drop"></div>
+    <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes, class: "dropdown-item" %>
+    </div>
+  </div>
+  <%= f.submit "Search", class: "btn btn-primary btn-search pad-small" %>
+  <!-- <%= link_to "Reset", root_path %> -->
 <% end %>
 </div>
 </div>
@@ -24,16 +33,19 @@
          <%= link_to yacht_path(yacht) do %>
          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.d5A5BDorSA6qjx78D35hfgHaEK%26pid%3DApi&f=1" alt="Yacht19" class="card-img-top">
          <% end %>
+         <div class="card-body">
          <div class="card-trip-infos">
          <div>
             <h2><%= yacht.name %></h2>
-            <p><%= yacht.description %></p>
+            <p class="description"><%= yacht.description %></p>
             <p><strong> <%= yacht.yacht_type %></strong></p>
-            <p><em><%= yacht.location %></em></p>
+            <!-- <p><em><%= yacht.location %></em></p> -->
          </div>
+            <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+         </div>
+         <hr>
            <h2 class="card-trip-pricing">£<%= yacht.rental_price%> per night</h2>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-         </div>
+      </div>
       </div>
       <% end %>
          </div>
