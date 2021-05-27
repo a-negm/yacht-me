@@ -26,8 +26,10 @@ class BookingsController < ApplicationController
     end
   end
 
+
+
   def successful
-    @bookings = Yacht.find(params[:yacht_id]).bookings
+    @bookings = Yacht.find(params[:yacht_id])
     authorize @bookings
 
     redirect_to my_bookings_path

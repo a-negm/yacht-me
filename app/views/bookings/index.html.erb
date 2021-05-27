@@ -5,6 +5,7 @@
 <h1>My bookings</h1>
 <div class="col">
       <% @bookings.each do |booking| %>
+
         <div class="card_bookings">
           <h2 class="card-title">Yacht name: <%= booking.yacht.name %></h2>
           <div class="checkin-data">
@@ -12,6 +13,7 @@
             <p>Your check out date is: <%= booking.check_out_date.strftime('%a %d %b %Y') %></p>
           </div>
           <p><%= booking.yacht.description %></p>
+          <p id="booking-status"> <strong><%= booking.status.capitalize %></p> </strong>
         </div>
       <% end %>
   </div>
