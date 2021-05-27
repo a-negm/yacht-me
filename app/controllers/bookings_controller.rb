@@ -20,18 +20,23 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.user = current_user
     if @booking.save
-      redirect_to yacht_booking_successful_path
+      redirect_to my_bookings_path
     else
       render :new
     end
   end
 
-  def successful
-    @bookings = Yacht.find(params[:yacht_id]).bookings
-    authorize @bookings
-
-    redirect_to my_bookings_path
+  def show
+    @booking = Booking.where(user: current_user)
+    authorize @booking
   end
+
+  # def successful
+  #   @bookings = Yacht.find(params[:yacht_id])
+  #   authorize @bookings
+
+  #   redirect_to my_bookings_path
+  # end
 
   def booking_params
     params.require(:booking).permit(:check_out_date, :check_in_date)

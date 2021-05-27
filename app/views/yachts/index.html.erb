@@ -19,13 +19,14 @@
       </div>
     </div>
 <!--Search a Yacht-->
+
    <div class="main-container">
    <hr>
    <div class="cards">
       <% @yachts.each do |yacht| %>
       <div class="card">
          <%= link_to yacht_path(yacht) do %>
-         <img src="<%= yacht.url %>" alt="Yacht19" class="card-img-top">
+
          <% end %>
          <div class="card-trip-infos">
          <div>
@@ -35,7 +36,7 @@
             <p><em><%= yacht.location %></em></p>
          </div>
            <h2 class="card-trip-pricing">£<%= yacht.rental_price%> per night</h2>
-            <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
          </div>
       </div>
       <% end %>
@@ -46,5 +47,5 @@
      </div>
    </div>
    <!-- Change the token below (https://www.mapbox.com/account/access-tokens/) -->
-  
+
 </div>

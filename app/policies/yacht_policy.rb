@@ -16,4 +16,8 @@ class YachtPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def successful?
+    true
+  end
 end
