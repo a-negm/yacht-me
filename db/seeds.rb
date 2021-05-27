@@ -33,11 +33,7 @@ Yacht.create(name: "The Marquess",
      number_of_cabins: 4,
      rental_price: 400,
      description: "A classic boat anchored at Southampton. A vintage yacht designed for the enterprising individual.",
-
      user_id: 2,
-
-     user_id: 1,
-
      location: "Honey Harbour",
      guests: 2)
 
