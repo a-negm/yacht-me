@@ -2,22 +2,16 @@
 <% if user_signed_in? %>
 <% end %>
 <!--Search a Yacht-->
-      <div class="searchbox">
-        <div class="row">
-          <div class="col-md-5"><input type="text" class="form-control" placeholder="Where to set sail?"></div>
-          <div class="col-md-3">
-            <select class="form-control category">
-              <option>Category</option>
-              <option>Sailing Yacht</option>
-              <option>Catamaran Yacht</option>
-              <option> Luxury Yacht</option>
-              <option>Sports Yacht</option>
-            </select>
-          </div>
-          <div class="col-md-1"><input type="button" class="btn btn-primary" class="form-control" value="Search"></div>
-        </div>
-      </div>
-    </div>
+<div class="searchbox">
+  <div class="row">
+<%= simple_form_for :search, url: yachts_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :location, input_html: {value: "Where you set sail?"} %> 
+  <%= f.input :category, label: "Categories", collection:$categories, as: :check_boxes %>  
+  <%= f.submit "Search", class: "btn btn-primary" %>
+  <%= link_to "Reset", root_path  %>
+<% end %>
+</div>
+</div>
 <!--Search a Yacht-->
    <div class="main-container">
    <hr>
@@ -25,7 +19,7 @@
       <% @yachts.each do |yacht| %>
       <div class="card">
          <%= link_to yacht_path(yacht) do %>
-         <img src="<%= yacht.url %>" alt="Yacht19" class="card-img-top">
+         <%# <img src="<%= yacht.url %>" alt="Yacht19" class="card-img-top"> %>
          <% end %>
          <div class="card-trip-infos">
          <div>

@@ -42,6 +42,9 @@ gem 'pundit'
 # Cloudinary
 gem 'cloudinary', '~> 1.16.0'
 
+# Search-Filter-gem
+gem 'acts-as-taggable-on', '~> 6.0'
+
 
 
 group :development, :test do
