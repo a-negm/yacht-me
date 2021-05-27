@@ -42,6 +42,8 @@ gem 'pundit'
 # Cloudinary
 gem 'cloudinary', '~> 1.16.0'
 
+# HTTParty
+gem 'httparty', '~> 0.18.1'
 
 
 group :development, :test do
@@ -61,7 +63,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Geocoder gem
-gem 'geocoder'
+  gem 'geocoder'
 end
 
 group :test do
