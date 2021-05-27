@@ -1,1 +1,4 @@
-<h1>@booking.yacht.name</h1>
+<%= render '/shared/navbar' %>
+<%= @booking.yacht.name %>
+<%= @booking.yacht.description %>
+£<%= (@booking.check_out_date - @booking.check_in_date) %>

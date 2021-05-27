@@ -20,4 +20,8 @@ class YachtPolicy < ApplicationPolicy
   def successful?
     true
   end
+
+  def destroy?
+    true
+  end
 end
