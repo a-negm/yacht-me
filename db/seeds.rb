@@ -21,6 +21,7 @@ Yacht.create(name: "HMS Eccles",
      description: "Beautiful yacht based in the French Riveria. Best used in the summer.",
      url: "https://images.unsplash.com/photo-1603377817563-5ccd33e57d05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1669&q=80",
      user_id: 3,
+     location: "Edificio 1501, Av Arnulfo Arias Madrid, Panamá, Panama",
      guests: 2)
 
 
@@ -33,6 +34,7 @@ Yacht.create(name: "The Marquess",
      url: "https://images.unsplash.com/photo-1503634192480-e77a6436f075?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
      description: "A classic boat anchored at Southampton. A vintage yacht designed for the enterprising individual.",
      user_id: 3,
+     location: "Honey Harbour",
      guests: 2)
 
 
@@ -44,6 +46,7 @@ Yacht.create(name: "The Dukesberry",
      url: "https://images.unsplash.com/photo-1572234601310-1ce8f3316141?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80",
      description: "A modern examplar of the finest yacht craftsmanship.",
      user_id: 3,
+     location: "Island Harbour, Neufundland und Labrador, Kanada",
      guests: 2)
 
 
@@ -55,7 +58,9 @@ Yacht.create(name: "Trump Princess",
      description: "Outfitted in marble and gold (and a master bedroom ceiling made of endangered tortoise shell), and equipped with such amenities as a helipad, a disco, and a movie theater.",
      user_id: 3,
      guests: 22,
+     location: "Island Harbour, Neufundland und Labrador, Kanada",
      url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.l9OQpruu1v_5nCmY8ZVpqQHaE8%26pid%3DApi&f=1")
+
 Yacht.create(name: "Vajoliroja",
      yacht_type: "sailing-yacht",
      length: 46,
@@ -64,7 +69,9 @@ Yacht.create(name: "Vajoliroja",
      description: "The name 'Vajoliroja' comes from a combination of names in the Depp family: 'Va' for Vanessa Paradis his girlfriend, 'jo' for Johnny's own name, 'liro' after Depp's daughter Lily Rose, and 'ja' for Depp's son Jack.",
      user_id: 3,
      guests: 12,
+     location: "Antarktika",
      url: "https://cdn.architecturendesign.net/wp-content/uploads/2015/08/01-AD-Vajoliroja-Johnny-Depp-Yacht.jpg")
+
 Yacht.create(name: "Venus",
      yacht_type: "luxury-yacht",
      length: 60,
@@ -73,4 +80,5 @@ Yacht.create(name: "Venus",
      description: "The yacht is built with glass features inspired by the Apple store designs, and it includes six bedrooms with a top-of-the-line electronic communication system to facilitate communication throughout the ship. The ship is run by a group of 27-inch iMac computers located in the wheel house.",
      user_id: 3,
      guests: 18,
+     location: "Ewa Beach",
      url: "https://cdn.architecturendesign.net/wp-content/uploads/2015/08/04-AD-Venus-Steve-Jobs-Yacht.jpg")
