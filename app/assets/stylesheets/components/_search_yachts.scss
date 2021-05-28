@@ -1,8 +1,18 @@
  .searchbox {
     background-color:#fff;
-    padding: 10px 50px 5px 20px;
+    padding-left: 25px;
+    padding-right: 10px;
     border-radius: 50px;
+    width: fit-content;
   }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 7px;
+  }
+
   .searchbox [class*="col-"] {
     padding: 0px;
   }
@@ -165,8 +175,8 @@
   .searchbox .chosen-single:after {
       content: "\f107";
       right: 28px;
-      top: 50%;
-      width: auto;
+      top: 60%;
+      width: 50%;
       height: auto;
       background: none;
       font-family:'FontAwesome';
@@ -199,3 +209,20 @@
     border-bottom:solid 1px transparent;
   }
   }
+
+//   <div class="searchbox">
+//         <div class="row">
+//           <div class="col-md-5"><input type="text" class="form-control" placeholder="Where to set sail?"></div>
+//           <div class="col-md-3">
+//             <select class="form-control category">
+//               <option>Category</option>
+//               <option>Sailing Yacht</option>
+//               <option>Catamaran Yacht</option>
+//               <option> Luxury Yacht</option>
+//               <option>Sports Yacht</option>
+//             </select>
+//           </div>
+//           <div class="col-md-1"><input type="button" class="btn btn-primary" class="form-control" value="Search"></div>
+//         </div>
+//       </div>
+//     </div>

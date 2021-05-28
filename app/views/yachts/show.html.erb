@@ -1,33 +1,32 @@
 <%= render 'shared/navbar' %>
-<section class='container-fluid' id='hero'>
-
+<section id='hero'>
+  <%= cl_image_tag @yacht.photo.key, width: 1920, crop: :fill %>
 </section>
 <div class="container-fluid">
-  <div class="row justify-content-between p-4">
-    <div class="col">
-      <h2><%= @yacht.name %></h2>
+  <div class="row" id='showHeader'>
+    <div class='col d-flex flex-row justify-content-between align-items-center mt-5'>
+    <div class='d-flex flex-row align-items-baseline'>
+      <h1><%= @yacht.name %></h1>
+      <h2 class='ml-5'><%= @yacht.rental_price %>€/night</h2>
+      <h3>
+        <div class='ml-5'>
+          <h2 class="fas fa-users"></h2>
+          <%= @yacht.guests %>
+        </div>
+      </h3>
     </div>
-      <%= link_to "Book this Yacht", new_yacht_booking_path(@yacht), class: "btn btn-primary btn-search" %>
+      <div>
+        <%= link_to "Book this Yacht", new_yacht_booking_path(@yacht), class: "btn btn-primary btn-large btn-lg btn-search" %>
+      </div>
+    </div>
       <!-- <a href="#" class="btn btn-primary">Book this Yacht</a> -->
   </div>
-  <div class="row justify-content-between p-4">
+  <div class="row justify-content-between mt-3" id='showBody'>
     <div class="col-8">
       <p><%= @yacht.description %></p>
     </div>
     <div class="col-4">
-      <div class="card">
-        <div class="card-header">
-          Specification
-        </div>
-        <div class="card-body">
-          <ul>
-            <li>Type: <%= @yacht.yacht_type %></li>
-            <li>Length: <%= @yacht.length %></li>
-            <li>Cabins: <%= @yacht.number_of_cabins %></li>
-            <li>Guests: <%= @yacht.guests %></li>
-          </ul>
-        </div>
-      </div>
+    <%= render 'specs' %>
     </div>
   </div>
 </div>
