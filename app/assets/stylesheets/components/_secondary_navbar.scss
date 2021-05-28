@@ -12,18 +12,19 @@
 }
 
 .secondary-navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .secondary-navbar-lewagon h2{
-  color: black;
+  color: white;
   border: 3px solid transparent;
   z-index: 50;
 }
 
 .secondary-navbar-lewagon a {
   text-decoration: none;
-  color: black !important;
+  color: white !important;
   font-size: 1.3rem;
   padding-bottom: 28px;
   margin-bottom: -31px;
@@ -36,5 +37,5 @@
 }
 
 .navbar-links-sec a:hover{
-  border-bottom: 3px solid rgba(0, 0, 0, .7);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.7);
 }

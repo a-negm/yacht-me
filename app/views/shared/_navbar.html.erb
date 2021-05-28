@@ -1,8 +1,5 @@
 <% if controller_name == "pages"%>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div>
-    <h1>Hello</h1>
-  </div>
     <%= link_to root_path, class: "navbar-brand" do %>
         <h2>Yacht Me</h2>
     <% end %>
@@ -38,7 +35,7 @@
   <% else %>
     <div class="navbar navbar-expand-sm navbar-light secondary-navbar-lewagon">
       <canvas id="canvas-basic"></canvas>
-        <%= link_to root_path, class: "navbar-brand" do %>
+        <%= link_to root_path, class: "navbar-brand d-flex" do %>
           <h2>Yacht Me</h2>
         <% end %>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
