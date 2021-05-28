@@ -1,4 +1,25 @@
 <%= render 'shared/navbar' %>
+<div class="user-bookings">
+  <h2 id="bookings-title">Bookings Overview</h2>
+  <% @bookings.each do |booking| %>
+    <div class="booking-card">
+      <div class="booking-card-user-info">
+        <h5> <strong> <%= booking.user.username %></strong> want's to rent the <%= booking.yacht.name %> </h5>
+        <p>Check In: <strong> <%= booking.check_in_date.strftime('%a %d %b %Y') %></strong></p>
+        <p>Check Out: <strong> <%= booking.check_out_date.strftime('%a %d %b %Y') %></strong></p>
+      </div>
+      <div class="booking-card-status">
+        <p>status: <strong><%= booking.status %></strong> </p>
+      </div>
+      <div class="booking-card-action">
+        <h5><%= link_to 'Confirm', booking_path(booking, booking: { status: 'accepted' }), method: :patch %></h5>
+        <h5><%= link_to 'Reject', booking_path(booking, booking: { status: 'rejected' }), method: :patch %></h5>
+        <h5><%= link_to 'Pending', booking_path(booking, booking: { status: 'pending' }), method: :patch %></h5>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 <div id="user-page">
   <div id="user-page-img" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(https://listings.classicyachtinfo.com/wp-content/uploads/listing-uploads/gallery/2020/08/Moonbeam-of-Fife-2017.jpg);">
   </div>
