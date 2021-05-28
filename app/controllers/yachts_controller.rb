@@ -63,6 +63,9 @@ class YachtsController < ApplicationController
     @yacht = Yacht.find(params[:id])
     authorize @yacht
     @markers = [{lng: @yacht.longitude, lat: @yacht.latitude}]
+    @bookings = Booking.where('yacht_id = ?', params[:id])
+    @reviews = Review.where(booking: @yacht)
+    @review = Review.new
   end
 
   private

@@ -1,6 +1,5 @@
 <%= render 'shared/navbar' %>
 <section id='hero'>
-  <%= cl_image_tag @yacht.photo.key, width: 1920, crop: :fill %>
 </section>
 <div class="container-fluid">
   <div class="row" id='showHeader'>
@@ -28,7 +27,31 @@
     <div class="col-4">
     <%= render 'specs' %>
     </div>
+   <div class="review container-fluid">
+      <h3>Reviews</h3>
+      <% @reviews.each do |review| %>
+      <div class="row">
+        <div class="col">
+        <%= review.content %>
+        <%= review.rating.to_i %> stars
+        </div>
+        </div>
+        <hr>
+      <% end %>
+    </div>
+
+    <div class="form-container">
+      <div class="form-fields">
+
+      <%= simple_form_for([@yacht, @review], url: yacht_reviews_path(@yacht), remote: true)  do |f|%>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.submit class: 'btn-search'%>
+      <% end %>
+      </div>
+    </div>
   </div>
+
 </div>
 <div class="mapWrapper mt-5">
   <div id="map"style="width: 100%; height: 600px;"

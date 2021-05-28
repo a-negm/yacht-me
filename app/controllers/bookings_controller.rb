@@ -37,14 +37,29 @@ class BookingsController < ApplicationController
     @booking.destroy
     redirect_to my_bookings_path
   end
+
+  def edit
+    @booking = Booking.find(params[:id])
+    authorize @booking
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.update(booking_params)
+    redirect_to user_path(current_user)
+  end
   # def successful
   #   @bookings = Yacht.find(params[:yacht_id])
   #   authorize @bookings
 
   #   redirect_to my_bookings_path
   # end
+  # def booking_status_params
+  #   params.require(:booking_status).permit()
+  # end
 
   def booking_params
-    params.require(:booking).permit(:check_out_date, :check_in_date)
+    params.require(:booking).permit(:check_out_date, :check_in_date, :status)
   end
 end
