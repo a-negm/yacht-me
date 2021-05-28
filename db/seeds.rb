@@ -11,7 +11,9 @@ require 'open-uri'
 def new_photo
   base_url = "https://api.unsplash.com/photos/random?client_id=#{ENV['UNSPLASH_KEY']}&query=yacht&orientation=landscape"
   response = HTTParty.get(base_url, format: :plain)
+  puts response
   results = JSON.parse response, symbolize_names: true
+
   yacht_photo = results[:urls][:full]
 end
 
