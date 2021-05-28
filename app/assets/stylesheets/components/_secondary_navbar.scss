@@ -3,8 +3,23 @@
   background: white;
   padding: 20px 100px ;
   border-bottom: 0.5px solid rgba(0, 0, 0, .5);
-
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .secondary-navbar-lewagon .navbar-collapse {
   flex-grow: 0;
