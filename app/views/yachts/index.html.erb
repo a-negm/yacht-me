@@ -35,16 +35,20 @@
          <% end %>
          <div class="card-body">
          <div class="card-trip-infos">
-         <div>
-            <h2><%= yacht.name %></h2>
-            <p class="description"><%= yacht.description %></p>
-            <p><strong> <%= yacht.yacht_type %></strong></p>
-            <!-- <p><em><%= yacht.location %></em></p> -->
+           <div>
+              <h2><%= yacht.name %></h2>
+              <p class="description"><%= yacht.description %></p>
+              <p class="card-trip-address" ><i class="fas fa-map-marker-alt"></i> <em><%= yacht.location %></em></p>
+           </div>
          </div>
-            <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+         <div class="card-trip-type">
+          <h2><i class="fas fa-user-friends"></i> <strong><%= yacht.guests %> </strong> </h2>
+          <h2><i class="fas fa-bed"></i> <strong><%= yacht.number_of_cabins %> </strong></h2>
+          <h2> <strong><%= yacht.yacht_type %></strong> </h2>
          </div>
-         <hr>
-           <h2 class="card-trip-pricing">£<%= yacht.rental_price%> per night</h2>
+         <div class="card-trip-pricing">
+            <h2 >£<%= yacht.rental_price%> per night</h2>
+         </div>
       </div>
       </div>
       <% end %>
