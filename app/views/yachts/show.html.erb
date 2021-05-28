@@ -34,15 +34,15 @@
     </div>
    <div class="review container-fluid">
       <h3>Reviews</h3>
-      <% @reviews.each do |review| %>
-      <div class="row">
-        <div class="col">
-        <%= review.content %>
-        <%= review.rating.to_i %> stars
-        </div>
+        <% @reviews.each do |review| %>
+        <div class="row">
+          <div class="col">
+            <%= review.content %>
+            <%= review.rating.to_i %> stars
+          </div>
+          <% end %>
         </div>
         <hr>
-      <% end %>
     </div>
 
     <div class="form-container">
