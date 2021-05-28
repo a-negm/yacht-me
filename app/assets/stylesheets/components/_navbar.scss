@@ -1,8 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
   padding: 20px 100px ;
   border-bottom: 0.5px solid rgba(255, 255, 255, .5);
+  position: relative;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -25,6 +25,7 @@
   padding-bottom: 28px;
   margin-bottom: -31px;
   border: 3px solid transparent;
+  z-index: 50;
 }
 
 .navbar-lewagon li {
@@ -33,4 +34,11 @@
 
 .navbar-links a:hover{
   border-bottom: 3px solid rgba(255, 255, 255, .7);
+}
+
+.canvas-basic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
 }
