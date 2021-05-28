@@ -6,11 +6,12 @@ Rails.application.routes.draw do
 
   resources :yachts do
     resources :bookings, only: %i[new create]
-
+     resources :reviews, only: %i[index new create]
      get '/booking_successful', to: "bookings#successful", as: :booking_successful
   end
      get '/my-bookings', to: 'bookings#index', as: :my_bookings
      delete '/bookings/:id', to: 'bookings#destroy', as: :delete_booking
      get 'bookings/:user_id', to: 'bookings#show', as: :booking
+  resources :bookings, only: :update
 
 end
