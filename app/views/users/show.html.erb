@@ -12,9 +12,9 @@
         <p>status: <strong><%= booking.status %></strong> </p>
       </div>
       <div class="booking-card-action">
-        <h5><%= link_to 'Confirm', booking_path(booking, booking: { status: 'accepted' }), method: :patch %></h5>
-        <h5><%= link_to 'Reject', booking_path(booking, booking: { status: 'rejected' }), method: :patch %></h5>
-        <h5><%= link_to 'Pending', booking_path(booking, booking: { status: 'pending' }), method: :patch %></h5>
+        <h5><%= link_to 'Confirm', booking_path(booking, booking: { status: 'accepted' }), method: :patch, remote: true %></h5>
+        <h5><%= link_to 'Reject', booking_path(booking, booking: { status: 'rejected' }), method: :patch, remote: true %></h5>
+        <h5><%= link_to 'Pending', booking_path(booking, booking: { status: 'pending' }), method: :patch, remote: true %></h5>
       </div>
     </div>
   <% end %>
