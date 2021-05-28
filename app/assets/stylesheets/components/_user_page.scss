@@ -9,6 +9,7 @@
   background-position: center;
   height: 60vh;
   width: 50%;
+  margin-left: 50px;
 }
 
 .user-cards {
@@ -34,7 +35,73 @@
 .yacht-delete a {
   color: black;
 }
-  // background: #BCEEF7;
-  // background: -webkit-linear-gradient(bottom right, #BCEEF7, #006B6B);
-  // background: -moz-linear-gradient(bottom right, #BCEEF7, #006B6B);
-  // background: linear-gradient(to top left, #BCEEF7, #006B6B);
+.user-bookings {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#bookings-title {
+  color: black;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+.booking-card {
+  display: flex;
+}
+
+.booking-card-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background: #0369b2;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  width: 400px;
+  border-radius: 10px 0px 0px 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.booking-card p{
+  margin:0;
+}
+
+.booking-card-status {
+  background: #0369b2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 1px dashed black;
+  width: 200px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.booking-card-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0369b2;
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 1px dashed black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 0px 10px 10px 0px;
+  width:150px;
+}
+
+.booking-card-action a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+.booking-card-action a:hover {
+  font-weight: bold;
+}

@@ -12,5 +12,6 @@ Rails.application.routes.draw do
      get '/my-bookings', to: 'bookings#index', as: :my_bookings
      delete '/bookings/:id', to: 'bookings#destroy', as: :delete_booking
      get 'bookings/:user_id', to: 'bookings#show', as: :booking
+  resources :bookings, only: :update
 
 end
