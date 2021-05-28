@@ -2,6 +2,7 @@ class Yacht < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
   has_many :reviews, through: :bookings
+  has_many :bookings
 
   acts_as_taggable_on :categories
 

@@ -55,7 +55,9 @@
 }
 
 // .description {
-//   text-overflow:ellipsis;
+//       overflow: hidden;
+//     max-height: 50px;
+//     min-height: 50px;
 // }
 
 .card-trip-infos {
