@@ -27,10 +27,10 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from "../plugins/flatpickr";
 import { changeStatusColor } from "../plugins/init_change_status_color.js";
-import { granimInstance } from "../plugins/granim";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+// import { granimInstance } from "../plugins/granim";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -38,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initFlatpickr();
   changeStatusColor();
+  // granimInstance();
 });

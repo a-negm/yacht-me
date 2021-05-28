@@ -1,18 +1,20 @@
-const granimInstance = new Granim({
-  element: '.canvas-basic',
-  name: 'basic-gradient',
-  direction: 'left-right',
-  opacity: [1, 1],
-  isPausedWhenNotInView: true,
-  states : {
-      "default-state": {
-          gradients: [
+const granimInstance = () => {
+  new Granim({
+    element: '.canvas-basic',
+    name: 'basic-gradient',
+    direction: 'left-right',
+    opacity: [1, 1],
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
 
-              ['#02AAB0', '#00CDAC'],
-              ['#DA22FF', '#9733EE']
-          ]
-      }
-  }
-});
+                ['#02AAB0', '#00CDAC'],
+                ['#DA22FF', '#9733EE']
+            ]
+        }
+    }
+  });
+}
 
 export { granimInstance }
