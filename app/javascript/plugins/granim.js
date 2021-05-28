@@ -1,5 +1,5 @@
 const granimInstance = new Granim({
-  element: '#canvas-basic',
+  element: '.canvas-basic',
   name: 'basic-gradient',
   direction: 'left-right',
   opacity: [1, 1],
