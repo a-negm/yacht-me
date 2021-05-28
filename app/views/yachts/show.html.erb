@@ -5,9 +5,15 @@
 <div class="container-fluid">
   <div class="row" id='showHeader'>
     <div class='col d-flex flex-row justify-content-between align-items-end mt-5'>
-    <div class='d-flex flex-row align-items-end'>
+    <div class='d-flex flex-row align-items-baseline'>
       <h1><%= @yacht.name %></h1>
-      <h3 class='ml-3'><%= @yacht.rental_price %>€/night</h3>
+      <h2 class='ml-5'><%= @yacht.rental_price %>€/night</h2>
+      <h3>
+        <div class='ml-5'>
+          <h2 class="fas fa-users"></h2>
+          <%= @yacht.guests %>
+        </div>
+      </h3>
     </div>
       <div>
         <%= link_to "Book this Yacht", new_yacht_booking_path(@yacht), class: "btn btn-primary btn-large btn-lg btn-search" %>

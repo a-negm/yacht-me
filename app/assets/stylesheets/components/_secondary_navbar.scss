@@ -8,6 +8,7 @@
 
 .secondary-navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  z-index: 50;
 }
 
 .secondary-navbar-lewagon .navbar-brand img {
@@ -17,6 +18,7 @@
 .secondary-navbar-lewagon h2{
   color: black;
   border: 3px solid transparent;
+  z-index: 50;
 }
 
 .secondary-navbar-lewagon a {
@@ -26,6 +28,7 @@
   padding-bottom: 28px;
   margin-bottom: -31px;
   border: 3px solid transparent;
+  z-index: 50;
 }
 
 .secondary-navbar-lewagon li {
