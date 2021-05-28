@@ -62,7 +62,8 @@ class YachtsController < ApplicationController
   def show
     @yacht = Yacht.find(params[:id])
     authorize @yacht
-    @review = Review.where('booking.yacht = ?', params[:yacht_id])
+    @bookings = Booking.where('yacht_id = ?', params[:id])
+    @reviews = Review.where('reviews.bookings.yacht = ?', params[:id])
   end
 
   private
