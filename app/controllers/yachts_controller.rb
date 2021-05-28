@@ -62,6 +62,7 @@ class YachtsController < ApplicationController
   def show
     @yacht = Yacht.find(params[:id])
     authorize @yacht
+    @markers = [{lng: @yacht.longitude, lat: @yacht.latitude}]
   end
 
   private
