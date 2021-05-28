@@ -1,10 +1,5 @@
 <%= render 'shared/navbar' %>
 <section id='hero'>
-  <% if @yacht.photo.attached? %>
-     <%= cl_image_tag @yacht.photo.key, width: 1920, crop: :fill %>
-  <% else %>
-  <%= image_tag "https://duckduckgo.com/i/b31649e7.jpg", alt: "alttext" %>
-  <% end %>
 </section>
 <div class="container-fluid">
   <div class="row" id='showHeader'>
@@ -32,18 +27,29 @@
     <div class="col-4">
     <%= render 'specs' %>
     </div>
-    <div class="review">
+   <div class="review container-fluid">
+      <h3>Reviews</h3>
       <% @reviews.each do |review| %>
+      <div class="row">
+        <div class="col">
         <%= review.content %>
+        <%= review.rating.to_i %> stars
+        </div>
+        </div>
+        <hr>
       <% end %>
     </div>
 
-    <div class="create-review">
-      <%= simple_form_for([@bookings, @review]) do |f|%>
+    <div class="form-container">
+      <div class="form-fields">
+
+      <%= simple_form_for([@yacht, @review], url: yacht_reviews_path(@yacht), remote: true)  do |f|%>
       <%= f.input :content %>
       <%= f.input :rating %>
-      <%= f.submit %>
+      <%= f.submit class: 'btn-search'%>
       <% end %>
+      </div>
     </div>
   </div>
+
 </div>
